@@ -25,13 +25,10 @@ class Loginpage extends Component
   }
   handleLogin(event)
   {
-    console.log("handle login event")
     var userlist = this.state.userslist
-    console.log(userlist)
     var userauth = false
     for(var i = 0 ; i < userlist.length ; i++)
     {
-      console.log("for loop")
       if (this.state.username==userlist[i]['username'] || this.state.username==userlist[i]['email'] && this.state.password==userlist[i]['password'])
       {
         this.setState({isUserAuthenticated:true})
@@ -63,7 +60,6 @@ class Loginpage extends Component
         length:state.length
       });
       ref.off()
-      console.log("loginpage",state)
     });
   }
   componentDidMount()
@@ -73,7 +69,6 @@ class Loginpage extends Component
   }
   render()
   {
-    console.log(this.state.userslist)
     return(
       <div className = "chat-app">
         <div className = "parent-box">

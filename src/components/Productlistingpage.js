@@ -28,13 +28,10 @@ class Productlistingpage extends Component
         productlist: state
     });
     });
-    console.log(this.state.productlist)
-    console.log('DATA RETRIEVED');
   }
   componentDidMount()
   {
     this.getProductDetails();
-    console.log(this.state.productlist)
 
   }
 
